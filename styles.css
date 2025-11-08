@@ -1,0 +1,80 @@
+:root{
+  --grad-start:#1fb6ff;
+  --grad-mid:#4b60ff;
+  --grad-end:#ff9a5f;
+  --glass-bg: rgba(255,255,255,0.6);
+  --glass-border: rgba(255,255,255,0.6);
+}
+*{box-sizing:border-box}
+body{font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:#f7f9fc}
+.fw-extrabold{font-weight:800}
+.py-6{padding-top:5rem;padding-bottom:5rem}
+.section-alt{background:linear-gradient(180deg,#f7f9fc, #ffffff 40%, #f7f9fc)}
+.brand-text{letter-spacing:.3px}
+
+.glassy{
+  background: var(--glass-bg);
+  backdrop-filter: blur(6px);
+}
+.logo-shadow{filter: drop-shadow(0 2px 6px rgba(0,0,0,.15));}
+
+.gradient-text{
+  background: linear-gradient(90deg,var(--grad-start),var(--grad-mid),var(--grad-end));
+  -webkit-background-clip:text;background-clip:text;color:transparent
+}
+.btn-gradient{
+  background: linear-gradient(90deg,var(--grad-start),var(--grad-mid),var(--grad-end));
+  color:#fff;border:none;
+}
+.btn-gradient:hover{opacity:.9;color:#fff}
+.btn-outline-gradient{
+  border:2px solid transparent;
+  color:#0b1736;
+  background: linear-gradient(#fff,#fff) padding-box,
+             linear-gradient(90deg,var(--grad-start),var(--grad-mid),var(--grad-end)) border-box;
+}
+.btn-outline-gradient:hover{background:linear-gradient(#f7f9fc,#f7f9fc) padding-box,
+             linear-gradient(90deg,var(--grad-start),var(--grad-mid),var(--grad-end)) border-box;color:#0b1736;opacity:.9}
+
+.badge-gradient{
+  background: linear-gradient(90deg,var(--grad-start),var(--grad-mid),var(--grad-end));
+  color:#fff;letter-spacing:.08em
+}
+
+.border-gradient{
+  border:1px solid transparent;
+  background:
+   linear-gradient(#ffffffaa,#ffffffaa) padding-box,
+   linear-gradient(120deg,var(--grad-start),var(--grad-mid),var(--grad-end)) border-box;
+}
+
+.hero-card .check{display:inline-block;width:22px;height:22px;line-height:22px;text-align:center;border-radius:999px;
+  background:linear-gradient(90deg,var(--grad-start),var(--grad-mid));color:#fff;font-weight:700;font-size:.85rem}
+.hero-logo{width:72px;opacity:.9}
+
+/* Pills */
+.pill{
+  display:flex;align-items:center;justify-content:center;
+  padding:.75rem 1rem;border-radius:999px;background:#fff;
+  border:1px solid rgba(0,0,0,.06);box-shadow:0 6px 20px rgba(0,0,0,.06);
+}
+
+/* Price cards */
+.price-card{background:#fff}
+.price-card.featured{transform:translateY(-8px);box-shadow:0 24px 60px rgba(0,0,0,.12)}
+
+/* Background shapes to echo the logo's gradient arc */
+.bg-shapes .blob{
+  position:fixed;z-index:-1;filter:blur(60px);opacity:.35;pointer-events:none
+}
+.blob-1{width:420px;height:420px;background:radial-gradient(circle at 30% 30%,var(--grad-mid),transparent 60%);top:-60px;left:-60px}
+.blob-2{width:460px;height:460px;background:radial-gradient(circle at 70% 40%,var(--grad-end),transparent 60%);bottom:-80px;right:-60px}
+.bg-shapes .grid{
+  position:fixed;inset:0;background:
+   linear-gradient(transparent,rgba(10,20,50,.03)),
+   repeating-linear-gradient(0deg, transparent, transparent 24px, rgba(10,20,50,.045) 25px),
+   repeating-linear-gradient(90deg, transparent, transparent 24px, rgba(10,20,50,.045) 25px);
+  z-index:-2;pointer-events:none
+}
+
+header{position:relative;overflow:hidden}
